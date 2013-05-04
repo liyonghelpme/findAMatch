@@ -1,3 +1,11 @@
+文件说明
+======
+UserMatch.sql 用户状态数据表格  设定mysql属性  使innodb 缓存到内存里面
+UserState  内部函数
+flaskEntry.py  web接口
+testFlask.py 测试web接口
+
+
 UserState
 ========
 用户数据表格包括
