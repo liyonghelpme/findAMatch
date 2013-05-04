@@ -37,9 +37,14 @@ updateOnlineTime 游戏过程中定时 需要更新在线状态
 ----
 1. findAMatch 搜索一个对手
 2. 客户端不断更新对手的attackTime updateAttackTime
-3. 客户端攻击该对手
-4. 如果攻击胜利 一定概率设定对手的 shieldTime 
-5. 用户登录获取attackTime 如果超时则设定 onlineTime 
-6. 用户在线中 一定时间更新一次onlineTime
+3. 客户端攻击该对手 攻击过程中不断更新 updateAttackTime
+4. 如果攻击胜利 一定概率设定对手的保护时间 startShield
+5. 用户攻击其它人 取消自身的保护状态 clearShield
+6. 用户登录获取attackTime 如果超时 则更新 onlineTime  并且进入游戏
+7. 用户在线中 一定时间更新一次onlineTime
+
+参数解释
+-----
+更新状态的接口中的passTime 用于表示从当前时间开始 之后的多长时间内该状态一直有效 时间到则状态自动失效
 
 
